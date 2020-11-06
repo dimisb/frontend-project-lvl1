@@ -2,7 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "![Actions Status](/workflows/hexlet-check/badge.svg)",
-  "main": "index.js",
+  "main": "brain-games.js",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
@@ -10,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "module",
+    "type": "git",
     "url": "git+https://github.com/dimisb/frontend-project-lvl1.git"
   },
   "author": "Dmitrijs Buncuks",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/dimisb/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/dimisb/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/dimisb/frontend-project-lvl1#readme",
+  "dependencies": {
+    "promptly": "^3.2.0"
+  }
 }
