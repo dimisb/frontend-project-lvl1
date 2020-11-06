@@ -1,3 +1,5 @@
+// greeting function
+
 import promptly from 'promptly';
 // Библиотека promptly работает в асинхронном режиме который мы еще не изучали
 // Для ее работы нужно выполнить две вещи:
