@@ -1,4 +1,4 @@
-// greeting function
+// greeting function:
 
 import readlineSync from 'readline-sync';
 
