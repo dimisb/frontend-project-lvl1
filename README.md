@@ -1,5 +1,5 @@
 ### Hexlet tests and linter status:
-![Actions Status](/workflows/hexlet-check/badge.svg)
+![Actions Status](https://github.com/dimisb/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/dimisb/frontend-project-lvl1/actions)
 
 # Frontend Project LVL1
 
