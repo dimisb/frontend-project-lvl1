@@ -3,7 +3,6 @@ import { isEven, getRandomInt } from '../math.js';
 import { gameRounds, maxRandom } from '../index.js';
 
 const correctAnswer = (question) => {
-  console.log(isEven(question));
   if (isEven(question)) return 'yes';
   return 'no';
 };
