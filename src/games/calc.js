@@ -24,8 +24,8 @@ const sign = () => {
 export default () => {
   let i = 0;
   let succesCount = 0;
-  let question = 0;
-  let answer = '';
+  let question = [];
+  let answer = 0;
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
