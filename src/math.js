@@ -21,3 +21,27 @@ export const calculate = (params) => {
   }
   return result;
 };
+
+// Greatest common divisor
+export const gcd = (a, b) => {
+  if (b === 0) return a;
+  return gcd(b, a % b);
+};
+
+// Arithmetical progression
+export const ap = (a1, d, n) => {
+  const progression = [];
+  for (let i = 1; i <= n; i += 1) {
+    const a = a1 + d * (i - 1);
+    progression.push(a);
+  }
+  return progression;
+};
+
+export const isPrime = (a) => {
+  if (a < 2) return false;
+  for (let divisor = 2; divisor <= a / 2; divisor += 1) {
+    if (a % divisor === 0) return false;
+  }
+  return true;
+};
