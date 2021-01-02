@@ -45,3 +45,20 @@ export const isPrime = (a) => {
   }
   return true;
 };
+
+export const getRandomSign = () => {
+  const s = getRandomInt(1, 4);
+  let result = '';
+  switch (s) {
+    case 1:
+      result = '+';
+      break;
+    case 2:
+      result = '-';
+      break;
+    default:
+      result = '*';
+      break;
+  }
+  return result;
+};
