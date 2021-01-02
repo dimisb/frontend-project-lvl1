@@ -1,38 +1,38 @@
 import readlineSync from 'readline-sync';
-import { calculate, getRandomInt } from '../math.js';
+import { calculate, getRandomInt, getRandomSign } from '../math.js';
 import { gameRounds, maxRandom } from '../index.js';
 
-const correctAnswer = (question) => calculate(question);
+let question = [];
+let answer = 0;
 
-const sign = () => {
-  const s = getRandomInt(1, 4);
-  let result = '';
-  switch (s) {
-    case 1:
-      result = '+';
-      break;
-    case 2:
-      result = '-';
-      break;
-    default:
-      result = '*';
-      break;
-  }
-  return result;
+const giveGameObjective = () => {
+  console.log('What is the result of the expression?');
 };
 
+const correctAnswer = (q) => calculate(q);
+
+const getAnswer = () => {
+  answer = readlineSync.question('Your answer: ');
+  return answer;
+};
+
+const askQuestion = () => {
+  question = [getRandomInt(1, maxRandom), getRandomSign(), getRandomInt(1, maxRandom)];
+  console.log(`Question: ${question[0]} ${question[1]} ${question[2]}`);
+  return question;
+};
+
+// game engine:
 export default () => {
   let i = 0;
   let succesCount = 0;
-  let question = [];
-  let answer = 0;
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?');
+  giveGameObjective();
   do {
-    question = [getRandomInt(1, maxRandom), sign(), getRandomInt(1, maxRandom)];
-    console.log(`Question: ${question[0]} ${question[1]} ${question[2]}`);
-    answer = readlineSync.question('Your answer: ');
+    question = askQuestion();
+    answer = getAnswer();
     if (+answer === correctAnswer(question)) {
       succesCount += 1;
       console.log('Correct!');
